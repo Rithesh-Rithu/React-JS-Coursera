@@ -72,4 +72,4 @@ function RenderComments({comments}){
         }
     }   
 
-export default DishDetail; 
+export default DishDetail;
