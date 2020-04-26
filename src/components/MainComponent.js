@@ -10,6 +10,8 @@ import { LEADERS } from '../shared/leaders'
 import { PROMOTIONS } from '../shared/promotions'
 import Header from './HeaderComponent'
 import Footer from './FooterComponent'
+import About from './AboutComponent'
+
 
 class Main extends Component {
   
@@ -40,15 +42,16 @@ class Main extends Component {
             comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))} />
       );
     };
-
+    
     return (
       <div>
         <Header />
         <Switch>
               <Route path='/home' component={HomePage} />
+              <Route  path='/aboutus' component={() => <About leaders={this.state.leaders} />} />
               <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
-              <Route exact path='/contactus' component={Contact} />} />
+              <Route exact path='/contactus' component={Contact} />
               <Redirect to="/home" />
           </Switch>
         <Footer />
