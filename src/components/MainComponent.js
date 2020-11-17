@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { actions } from "react-redux-form";
 import Home from "./HomeComponent";
 import Menu from "./MenuComponent";
-import DishDetail from "./DishDetailComponent ";
+import DishDetail from "./DishdetailComponent ";
 import Contact from "./ContactComponent";
 import AboutUs from "./AboutComponent";
 import Header from "./HeaderComponent";
